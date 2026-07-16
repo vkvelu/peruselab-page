@@ -112,6 +112,40 @@ a:focus-visible {
   cursor: pointer;
 }
 
+.scroll-top-fab {
+  position: fixed;
+  right: clamp(16px, 3vw, 24px);
+  bottom: clamp(16px, 3vw, 24px);
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  box-shadow: var(--shadow);
+  font-size: 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.scroll-top-fab.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-fab:hover,
+.scroll-top-fab:focus-visible {
+  background: var(--blue-dark);
+}
+
 .section,
 .section-band {
   padding: clamp(56px, 8vw, 104px) clamp(18px, 5vw, 72px);

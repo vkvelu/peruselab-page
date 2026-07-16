@@ -3,9 +3,27 @@ const siteNav = document.querySelector(".site-nav");
 const navIcon = document.querySelector(".nav-icon");
 const year = document.querySelector("#year");
 const copyEmail = document.querySelector("#copy-email");
+const scrollTopFab = document.querySelector("#scroll-top-fab");
 
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+if (scrollTopFab) {
+  const toggleScrollTopFab = () => {
+    if (window.scrollY > 320) {
+      scrollTopFab.classList.add("is-visible");
+    } else {
+      scrollTopFab.classList.remove("is-visible");
+    }
+  };
+
+  window.addEventListener("scroll", toggleScrollTopFab, { passive: true });
+  scrollTopFab.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  toggleScrollTopFab();
 }
 
 if (navToggle && siteNav) {
