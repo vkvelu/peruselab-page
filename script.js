@@ -2,7 +2,6 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navIcon = document.querySelector(".nav-icon");
 const year = document.querySelector("#year");
-const copyEmail = document.querySelector("#copy-email");
 const scrollTopFab = document.querySelector("#scroll-top-fab");
 
 if (year) {
@@ -42,21 +41,6 @@ if (navToggle && siteNav) {
       if (navIcon) {
         navIcon.textContent = "☰";
       }
-    }
-  });
-}
-
-if (copyEmail) {
-  copyEmail.addEventListener("click", async () => {
-    const email = copyEmail.dataset.email || "";
-    try {
-      await navigator.clipboard.writeText(email);
-      copyEmail.textContent = "Email Copied";
-      window.setTimeout(() => {
-        copyEmail.textContent = "Copy Email";
-      }, 1800);
-    } catch {
-      copyEmail.textContent = email;
     }
   });
 }

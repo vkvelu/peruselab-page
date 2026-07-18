@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:peruselab.com)",
+      "Bash(python3 -c ' *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --no-sandbox --disable-gpu --virtual-time-budget=4000 --dump-dom \"http://localhost:8934/_debug_scroll4.html\")"
+    ]
+  }
+}
