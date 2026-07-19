@@ -151,12 +151,32 @@
         </div>
         <div class="capability-grid">
           <article>
-            <span class="feature-icon">
+            <span class="feature-icon" id="draw-search-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <g transform="rotate(45 12 12)">
-                  <rect x="9.6" y="1" width="4.8" height="14.5" rx="1.4" fill="currentColor" opacity="0.55" />
-                  <rect x="9.6" y="12" width="4.8" height="3" fill="currentColor" />
-                  <polygon points="9.6,15 14.4,15 12,22" fill="currentColor" />
+                <defs>
+                  <linearGradient id="pencil-yellow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f9a825" />
+                    <stop offset="40%" stop-color="#ffd54f" />
+                    <stop offset="70%" stop-color="#fff5cc" />
+                    <stop offset="100%" stop-color="#ffca28" />
+                  </linearGradient>
+                  <linearGradient id="pencil-wood" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#8d5524" />
+                    <stop offset="40%" stop-color="#c68642" />
+                    <stop offset="70%" stop-color="#f0c896" />
+                    <stop offset="100%" stop-color="#b5651d" />
+                  </linearGradient>
+                  <linearGradient id="pencil-graphite" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1a1a1a" />
+                    <stop offset="40%" stop-color="#3d3d3d" />
+                    <stop offset="70%" stop-color="#757575" />
+                    <stop offset="100%" stop-color="#2b2b2b" />
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(45 12 12) scale(1.2) translate(-1.5 -1.5)">
+                  <rect x="9.6" y="1" width="4.8" height="13" rx="1.4" fill="url(#pencil-yellow)" />
+                  <polygon points="9.6,14 14.4,14 12.6,20 11.4,20" fill="url(#pencil-wood)" />
+                  <polygon points="11.4,20 12.6,20 12,22" fill="url(#pencil-graphite)" />
                 </g>
               </svg>
             </span>
@@ -167,7 +187,7 @@
             </p>
           </article>
           <article>
-            <span class="feature-icon">
+            <span class="feature-icon" id="structure-search-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                 <circle cx="10.5" cy="10.5" r="7" stroke="currentColor" stroke-width="2.2" />
                 <line x1="15.8" y1="15.8" x2="21" y2="21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
@@ -181,10 +201,22 @@
             </p>
           </article>
           <article>
-            <span class="feature-icon">
+            <span class="feature-icon" id="ai-doc-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="currentColor" />
-                <circle cx="19" cy="5" r="1.6" fill="currentColor" opacity="0.6" />
+                <defs>
+                  <radialGradient id="spark-gold" cx="50%" cy="50%" r="65%" fx="68%" fy="32%">
+                    <stop offset="0%" stop-color="#fff5cc" />
+                    <stop offset="45%" stop-color="#ffb300" />
+                    <stop offset="100%" stop-color="#7c4a03" />
+                  </radialGradient>
+                  <radialGradient id="spark-blue" cx="50%" cy="50%" r="65%" fx="68%" fy="32%">
+                    <stop offset="0%" stop-color="#e3f2fd" />
+                    <stop offset="45%" stop-color="#42a5f5" />
+                    <stop offset="100%" stop-color="#0c3a6b" />
+                  </radialGradient>
+                </defs>
+                <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="url(#spark-gold)" />
+                <circle cx="19" cy="5" r="1.6" fill="url(#spark-blue)" />
               </svg>
             </span>
             <h3>AI-Assisted Documentation</h3>
@@ -195,14 +227,31 @@
             </p>
           </article>
           <article>
-            <span class="feature-icon">
+            <span class="feature-icon" id="3d-visualization-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <radialGradient id="node-blue" cx="50%" cy="50%" r="65%" fx="72%" fy="28%">
+                    <stop offset="0%" stop-color="#8ecbff" />
+                    <stop offset="55%" stop-color="#1976d2" />
+                    <stop offset="100%" stop-color="#0c3a6b" />
+                  </radialGradient>
+                  <radialGradient id="node-red" cx="50%" cy="50%" r="65%" fx="72%" fy="28%">
+                    <stop offset="0%" stop-color="#ffb3ab" />
+                    <stop offset="55%" stop-color="#e53935" />
+                    <stop offset="100%" stop-color="#7a0d0a" />
+                  </radialGradient>
+                  <radialGradient id="node-purple" cx="50%" cy="50%" r="65%" fx="72%" fy="28%">
+                    <stop offset="0%" stop-color="#e2b3f0" />
+                    <stop offset="55%" stop-color="#8e24aa" />
+                    <stop offset="100%" stop-color="#3d0a4a" />
+                  </radialGradient>
+                </defs>
                 <line x1="7" y1="17" x2="12" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 <line x1="12" y1="7" x2="18" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 <line x1="7" y1="17" x2="18" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.55" />
-                <circle cx="12" cy="7" r="3" fill="currentColor" />
-                <circle cx="7" cy="17" r="3" fill="currentColor" opacity="0.7" />
-                <circle cx="18" cy="15" r="3" fill="currentColor" opacity="0.7" />
+                <circle cx="12" cy="7" r="3" fill="url(#node-blue)" />
+                <circle cx="7" cy="17" r="3" fill="url(#node-red)" />
+                <circle cx="18" cy="15" r="3" fill="url(#node-purple)" />
               </svg>
             </span>
             <h3>3D Molecular Visualization</h3>
@@ -212,11 +261,31 @@
             </p>
           </article>
           <article>
-            <span class="feature-icon">
+            <span class="feature-icon" id="analytics-reuse-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <rect x="3" y="14" width="4.5" height="8" rx="1" fill="currentColor" opacity="0.55" />
-                <rect x="9.75" y="9" width="4.5" height="13" rx="1" fill="currentColor" opacity="0.78" />
-                <rect x="16.5" y="4" width="4.5" height="18" rx="1" fill="currentColor" />
+                <defs>
+                  <linearGradient id="cylinder-red" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#7a0d0a" />
+                    <stop offset="40%" stop-color="#e53935" />
+                    <stop offset="70%" stop-color="#ffb3ab" />
+                    <stop offset="100%" stop-color="#c62828" />
+                  </linearGradient>
+                  <linearGradient id="cylinder-green" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1b5e20" />
+                    <stop offset="40%" stop-color="#43a047" />
+                    <stop offset="70%" stop-color="#a5d6a7" />
+                    <stop offset="100%" stop-color="#2e7d32" />
+                  </linearGradient>
+                  <linearGradient id="cylinder-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#0c3a6b" />
+                    <stop offset="40%" stop-color="#1976d2" />
+                    <stop offset="70%" stop-color="#8ecbff" />
+                    <stop offset="100%" stop-color="#1565c0" />
+                  </linearGradient>
+                </defs>
+                <rect x="3" y="9" width="4.5" height="13" rx="1" fill="url(#cylinder-green)" />
+                <rect x="9.75" y="14" width="4.5" height="8" rx="1" fill="url(#cylinder-red)" />
+                <rect x="16.5" y="4" width="4.5" height="18" rx="1" fill="url(#cylinder-blue)" />
               </svg>
             </span>
             <h3>Analytics & Reuse</h3>
@@ -228,8 +297,20 @@
           <article>
             <span class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <rect x="3" y="5" width="14" height="14" rx="2.5" fill="currentColor" opacity="0.45" />
-                <rect x="7" y="9" width="14" height="14" rx="2.5" fill="currentColor" />
+                <defs>
+                  <linearGradient id="card-back" x1="100%" y1="0%" x2="10%" y2="100%">
+                    <stop offset="0%" stop-color="#eef3f8" />
+                    <stop offset="45%" stop-color="#b0c4d8" />
+                    <stop offset="100%" stop-color="#7c93ab" />
+                  </linearGradient>
+                  <linearGradient id="card-front" x1="100%" y1="0%" x2="10%" y2="100%">
+                    <stop offset="0%" stop-color="#8ecbff" />
+                    <stop offset="45%" stop-color="#1976d2" />
+                    <stop offset="100%" stop-color="#0c3a6b" />
+                  </linearGradient>
+                </defs>
+                <rect x="3" y="5" width="14" height="14" rx="2.5" fill="url(#card-back)" />
+                <rect x="7" y="9" width="14" height="14" rx="2.5" fill="url(#card-front)" />
               </svg>
             </span>
             <h3>Templates & Collaboration</h3>
@@ -253,8 +334,16 @@
           <article>
             <span class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <circle cx="12" cy="9" r="6" fill="currentColor" opacity="0.85" />
-                <path d="M8.5 14L6 22l6-3 6 3-2.5-8" fill="currentColor" opacity="0.5" />
+                <defs>
+                  <radialGradient id="badge-sphere" cx="50%" cy="50%" r="65%" fx="72%" fy="28%">
+                    <stop offset="0%" stop-color="#8ecbff" />
+                    <stop offset="55%" stop-color="#1976d2" />
+                    <stop offset="100%" stop-color="#0c3a6b" />
+                  </radialGradient>
+                </defs>
+                <circle cx="12" cy="9" r="6" fill="url(#badge-sphere)" />
+                <path d="M8.5 14L6 22l6-3V14Z" fill="#ffa726" />
+                <path d="M15.5 14L18 22l-6-3V14Z" fill="#f4165c" />
               </svg>
             </span>
             <h3>Reputation & Progression</h3>
